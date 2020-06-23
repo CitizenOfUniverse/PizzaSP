@@ -7,7 +7,7 @@ public class Order {
     String phoneNumber;
     String address;
     PayMethod payMethod;
-    
+
     public void setProduct(Product[] product) {
         this.product = product;
     }
@@ -47,5 +47,10 @@ public class Order {
     public PayMethod getPayMethod() {
         return payMethod;
     }
-
+    public boolean isQuantityCorrect(){
+        int pizzaNum = 0;
+        int drinksNum = 0;
+        //TODO: checking
+        return pizzaNum <= 5 & drinksNum <= 5;
+    }
 }
