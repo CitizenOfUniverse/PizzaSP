@@ -1,14 +1,24 @@
 package com.epam.pizza.model;
 
+import java.util.List;
+
 public class Order {
     enum PayMethod{CreditCard, Cash}
-    Product[] product;
+    List<Product> product;
     String name;
     String phoneNumber;
     String address;
     PayMethod payMethod;
 
-    public void setProduct(Product[] product) {
+    public Order(List<Product> product) {
+        this.product = product;
+    }
+
+    Order(){
+        // this.product = new List<Product>();
+    }
+
+    public void setProduct(List<Product> product) {
         this.product = product;
     }
 
@@ -28,7 +38,7 @@ public class Order {
         this.payMethod = payMethod;
     }
 
-    public Product[] getProduct() {
+    public List<Product> getProduct() {
         return product;
     }
 

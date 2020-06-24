@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import com.epam.pizza.model.*;
+
 @RestController
 public class OrderController {
 
@@ -24,6 +26,12 @@ public class OrderController {
     @PostMapping("/CreateOrder")
     public boolean createOrder() {
         return true;
+    }
+
+    @GetMapping("/tryProducts")
+    public Product tryProducts(){
+        Product pr = new Pizza(new String("Мясная"), 2);
+        return pr;
     }
 
 }

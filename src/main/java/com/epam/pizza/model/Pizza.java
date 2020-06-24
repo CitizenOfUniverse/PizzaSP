@@ -7,6 +7,25 @@ public class Pizza extends Product {
     String nutritionalValue;
     int ccal;
 
+    /*public Pizza(String productName, int value, String pizzaType) {
+        super(productName, value);
+        this.pizzaType = pizzaType;
+    }*/
+
+    public Pizza(String productName, int value) {
+        super(productName, value);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
     public Ingredients[] getComposition() {
         return composition;
     }
